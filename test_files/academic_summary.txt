@@ -1,0 +1,22 @@
+===== ACADEMIC MANAGEMENT SYSTEM SUMMARY =====
+Generated: Wed Nov 12 16:35:13 GMT+03:00 2025
+
+SYSTEM STATISTICS:
+Total Users: 17
+Students: 13
+Instructors: 3
+Administrators: 1
+
+Total Courses: 8
+
+COURSE LIST:
+Course Code | Course Name                    | Semester      | Instructor
+-------------------------------------------------------------------------
+CS101       | Introduction to Computer Science | Fall 2024     | Ahmad Al-Salem
+CS102       | Data Structures                | Fall 2024     | Ahmad Al-Salem
+CS201       | Database Systems               | Fall 2024     | Fatima Al-Rashid
+CS301       | Advanced Programming           | Fall 2024     | Ahmad Al-Salem
+MATH201     | Calculus I                     | Fall 2024     | Omar Al-Mansour
+MATH202     | Calculus II                    | Fall 2024     | Omar Al-Mansour
+CS202       | Algorithms                     | Fall 2024     | Fatima Al-Rashid
+CS150       | Web Development                | Fall 2024     | Ahmad Al-Salem

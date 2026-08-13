@@ -1,0 +1,3 @@
+test1|pass123|Test|Student1|test1@student.edu|Computer Science|2025
+test2|pass123|Test|Student2|test2@student.edu|Mathematics|2025
+test3|pass123|Test|Student3|test3@student.edu|Engineering|2024

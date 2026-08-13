@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="academicmanagmentsystem.controller.InstructorDashboardController">
+
+    <!-- Top: Header -->
+    <top>
+        <VBox style="-fx-background-color: #4CAF50; -fx-padding: 15;">
+            <Label fx:id="welcomeLabel" text="Welcome, Dr. Instructor" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="infoLabel" text="Department: | Specialization: " textFill="WHITE">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- Left: Navigation Menu -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #f5f5f5; -fx-padding: 15;">
+            <Button text="My Courses" onAction="#showMyCourses" prefWidth="150" />
+            <Button text="Create Course" onAction="#showCreateCourse" prefWidth="150" />
+            <Button text="Enter Grades" onAction="#showGradeEntry" prefWidth="150" />
+            <Button text="Course Statistics" onAction="#showStatistics" prefWidth="150" />
+            <Button text="Export Report" onAction="#exportReport" prefWidth="150" />
+            <Button text="Import Grades" onAction="#importGrades" prefWidth="150" />
+            <Button text="Logout" onAction="#handleLogout" prefWidth="150" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Center: Main Content Area -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <Label text="My Courses" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+            <TableView fx:id="coursesTable" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="courseCodeColumn" text="Course Code" prefWidth="120" />
+                    <TableColumn fx:id="courseNameColumn" text="Course Name" prefWidth="250" />
+                    <TableColumn fx:id="creditHoursColumn" text="Credits" prefWidth="80" />
+                    <TableColumn fx:id="semesterColumn" text="Semester" prefWidth="100" />
+                    <TableColumn fx:id="enrolledColumn" text="Enrolled" prefWidth="80" />
+                    <TableColumn fx:id="capacityColumn" text="Capacity" prefWidth="80" />
+                </columns>
+            </TableView>
+
+            <Label text="Students in Selected Course" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+            <TableView fx:id="studentsTable" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="studentIdColumn" text="Student ID" prefWidth="120" />
+                    <TableColumn fx:id="studentNameColumn" text="Student Name" prefWidth="200" />
+                    <TableColumn fx:id="majorColumn" text="Major" prefWidth="150" />
+                    <TableColumn fx:id="gradeColumn" text="Grade" prefWidth="80" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,44 @@
+===== INSTRUCTOR PERFORMANCE REPORT =====
+Instructor: Dr. Ahmad Al-Salem
+Department: Computer Science
+Specialization: Software Engineering
+
+Course: CS101 - Introduction to Computer Science
+Semester: Fall 2024
+Credit Hours: 3
+Enrolled Students: 0/30
+Students:
+Student Name                    | Grade
+-------------------------------------------
+Lujain Al-Harbi                | A
+Sara Al-Qahtani                | A
+Mohammed Al-Shehri             | B+
+
+Course: CS102 - Data Structures
+Semester: Fall 2024
+Credit Hours: 4
+Enrolled Students: 1/25
+Students:
+Student Name                    | Grade
+-------------------------------------------
+Lujain Al-Harbi                | -
+
+Course: CS301 - Advanced Programming
+Semester: Fall 2024
+Credit Hours: 4
+Enrolled Students: 2/20
+Students:
+Student Name                    | Grade
+-------------------------------------------
+Khalid Al-Otaibi               | -
+Noura Al-Malki                 | -
+
+Course: CS150 - Web Development
+Semester: Fall 2024
+Credit Hours: 3
+Enrolled Students: 1/30
+Students:
+Student Name                    | Grade
+-------------------------------------------
+Mohammed Al-Shehri             | -
+

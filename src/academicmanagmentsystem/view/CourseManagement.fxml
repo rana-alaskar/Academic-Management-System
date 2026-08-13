@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="academicmanagmentsystem.controller.CourseManagementController">
+
+    <!-- Top: Header -->
+    <top>
+        <VBox style="-fx-background-color: #4CAF50; -fx-padding: 15;">
+            <Label text="Course Management" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+            <Label text="Manage your courses - Create, Update, and Delete" textFill="WHITE">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- Center: Main Content -->
+    <center>
+        <HBox spacing="20" style="-fx-padding: 20;">
+
+            <!-- Left Side: Course List -->
+            <VBox spacing="10" prefWidth="450">
+                <Label text="My Courses" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+                <HBox spacing="10">
+                    <TextField fx:id="searchField" promptText="Search courses..." HBox.hgrow="ALWAYS" />
+                    <Button text="Search" onAction="#handleSearch" />
+                    <Button text="Refresh" onAction="#refreshCourses" />
+                </HBox>
+
+                <TableView fx:id="coursesTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="courseCodeColumn" text="Code" prefWidth="80" />
+                        <TableColumn fx:id="courseNameColumn" text="Course Name" prefWidth="200" />
+                        <TableColumn fx:id="semesterColumn" text="Semester" prefWidth="80" />
+                        <TableColumn fx:id="enrolledColumn" text="Enrolled" prefWidth="80" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Right Side: Course Form -->
+            <VBox spacing="15" prefWidth="400" style="-fx-background-color: #f9f9f9; -fx-padding: 20; -fx-border-color: #ddd; -fx-border-width: 1;">
+                <Label text="Course Details" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+                <GridPane hgap="10" vgap="12">
+                    <Label text="Course Code:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="courseCodeField" promptText="e.g., CS101" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="courseNameField" promptText="e.g., Introduction to Programming" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label text="Credit Hours:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="creditHoursField" promptText="e.g., 3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <Label text="Semester:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <ComboBox fx:id="semesterComboBox" promptText="Select semester" GridPane.columnIndex="1" GridPane.rowIndex="3" prefWidth="200" />
+
+                    <Label text="Year:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <TextField fx:id="yearField" promptText="e.g., 2024" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <Label text="Max Capacity:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <TextField fx:id="maxCapacityField" promptText="e.g., 30" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                </GridPane>
+
+                <Label fx:id="messageLabel" text="" wrapText="true" style="-fx-padding: 5;" />
+
+                <HBox spacing="10">
+                    <Button text="Add Course" onAction="#handleAddCourse" prefWidth="120" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                    <Button text="Update Course" onAction="#handleUpdateCourse" prefWidth="120" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                    <Button text="Delete Course" onAction="#handleDeleteCourse" prefWidth="120" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+                </HBox>
+
+                <Button text="Clear Form" onAction="#clearForm" prefWidth="120" />
+            </VBox>
+
+        </HBox>
+    </center>
+
+    <!-- Bottom: Back Button -->
+    <bottom>
+        <HBox style="-fx-padding: 10; -fx-alignment: center-right;">
+            <Button text="Back to Dashboard" onAction="#handleBack" prefWidth="150" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

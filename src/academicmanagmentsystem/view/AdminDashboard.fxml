@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="academicmanagmentsystem.controller.AdminDashboardController">
+
+    <!-- Top: Header -->
+    <top>
+        <VBox style="-fx-background-color: #FF9800; -fx-padding: 15;">
+            <Label fx:id="welcomeLabel" text="Welcome, Administrator" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="infoLabel" text="Admin ID: | Access Level: " textFill="WHITE">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- Left: Navigation Menu -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #f5f5f5; -fx-padding: 15;">
+            <Button text="Manage Users" onAction="#showUserManagement" prefWidth="150" />
+            <Button text="Manage Courses" onAction="#showCourseManagement" prefWidth="150" />
+            <Button text="System Reports" onAction="#showReports" prefWidth="150" />
+            <Button text="Import Data" onAction="#showImportData" prefWidth="150" />
+            <Button text="Export Summary" onAction="#exportSummary" prefWidth="150" />
+            <Button text="Logout" onAction="#handleLogout" prefWidth="150" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Center: Main Content Area - System Statistics -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 20;">
+            <Label text="System Statistics" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+            <GridPane hgap="15" vgap="15">
+                <Label text="Total Users:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="totalUsersLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Students:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="totalStudentsLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Instructors:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="totalInstructorsLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Administrators:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="totalAdminsLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Total Courses:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="totalCoursesLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="Total Enrollments:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label fx:id="totalEnrollmentsLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>

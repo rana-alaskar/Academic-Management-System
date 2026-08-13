@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="academicmanagmentsystem.controller.StudentDashboardController">
+
+    <!-- Top: Header -->
+    <top>
+        <VBox style="-fx-background-color: #2196F3; -fx-padding: 15;">
+            <Label fx:id="welcomeLabel" text="Welcome, Student" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Label>
+            <Label fx:id="infoLabel" text="Student ID: | Major: | GPA: " textFill="WHITE">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <!-- Left: Navigation Menu -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #f5f5f5; -fx-padding: 15;">
+            <Button text="My Courses" onAction="#showMyCourses" prefWidth="150" />
+            <Button text="Enroll in Course" onAction="#showCourseRegistration" prefWidth="150" />
+            <Button text="My Grades" onAction="#showMyGrades" prefWidth="150" />
+            <Button text="Export Transcript" onAction="#exportTranscript" prefWidth="150" />
+            <Button text="Logout" onAction="#handleLogout" prefWidth="150" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Center: Main Content Area -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <Label text="Enrolled Courses" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+            <TableView fx:id="coursesTable" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="courseCodeColumn" text="Course Code" prefWidth="120" />
+                    <TableColumn fx:id="courseNameColumn" text="Course Name" prefWidth="250" />
+                    <TableColumn fx:id="creditHoursColumn" text="Credits" prefWidth="80" />
+                    <TableColumn fx:id="semesterColumn" text="Semester" prefWidth="100" />
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="100" />
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <Label text="Total Credits:" style="-fx-font-weight: bold;" />
+                <Label fx:id="totalCreditsLabel" text="0" />
+                <Label text="GPA:" style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" />
+                <Label fx:id="gpaLabel" text="0.00" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
